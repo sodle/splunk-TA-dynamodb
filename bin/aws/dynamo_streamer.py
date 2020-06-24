@@ -21,7 +21,7 @@ class DynamoStreamer:
     :type stream_arn: str
     """
 
-    def __init__(self, session, region, table_name, ):
+    def __init__(self, session, region, table_name):
         self.dynamo = session.client('dynamodb', region_name=region)
         self.dynamo_streams = session.client('dynamodbstreams', region_name=region)
 
